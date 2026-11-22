@@ -1,0 +1,253 @@
+/* =========================================
+   CHERRY BLOSSOM - RESPONSIVE DESIGN
+========================================= */
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    /* LOGO + WELCOME TEXT */
+
+    .navbar .logo {
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .navbar .logo img {
+        width: 65px;
+        height: 60px;
+    }
+
+    .welcome-text {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    /* NAVIGATION */
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero-content {
+        padding-left: 8%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 72px;
+        padding: 0 6%;
+    }
+
+    /* LOGO */
+
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        max-width: calc(100% - 55px);
+    }
+
+    .navbar .logo img {
+        width: 50px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    /* WELCOME TEXT */
+
+    .welcome-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        line-height: 1.4;
+        color: var(--dusty-blush);
+        white-space: normal;
+    }
+
+    /* MOBILE MENU BUTTON */
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    /* NAVIGATION LINKS */
+
+    .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        background: rgba(16, 13, 13, 0.98);
+        border-top: 1px solid rgba(197, 142, 136, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    /* HERO SECTION */
+
+    .hero {
+        min-height: 700px;
+        height: 100vh;
+    }
+
+    .hero-content {
+        padding: 90px 8% 100px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(38px, 10vw, 55px);
+    }
+
+    .hero-subtitle {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.85),
+                rgba(0, 0, 0, 0.5));
+    }
+
+
+    /* SLIDESHOW ARROWS */
+
+    .slide-arrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    #prevSlide {
+        left: 10px;
+    }
+
+    #nextSlide {
+        right: 10px;
+    }
+
+
+    /* SLIDE INDICATORS */
+
+    .hero-indicators {
+        bottom: 35px;
+        right: 50%;
+        transform: translateX(50%);
+        gap: 6px;
+    }
+
+    .hero-indicators button {
+        width: 13px;
+    }
+
+    .hero-indicators button.active {
+        width: 25px;
+    }
+
+
+    /* COUNTER */
+
+    .hero-counter,
+    .scroll-indicator {
+        display: none;
+    }
+
+
+    /* SERVICES */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* SECTIONS */
+
+    .section-padding {
+        padding: 80px 7%;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    /* LOGO */
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar .logo img {
+        width: 43px;
+        height: 50px;
+    }
+
+    .welcome-text {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        text-align: center;
+        padding: 13px 17px;
+        font-size: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+}

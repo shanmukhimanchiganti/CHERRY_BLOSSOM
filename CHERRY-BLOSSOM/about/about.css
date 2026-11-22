@@ -1,0 +1,1093 @@
+/* =========================================
+   CHERRY BLOSSOM - ABOUT PAGE
+   TEMPLE ARCH PHOTO FRAME DESIGN
+   Rose | Burgundy | Warm Beige | Olive
+========================================= */
+
+
+/* =========================================
+   1. ROOT VARIABLES
+========================================= */
+
+:root {
+    --rose: #C08081;
+    --rose-light: #D9A9A3;
+    --rose-dark: #985D63;
+    --rose-deep: #75434B;
+
+    --burgundy: #702D3B;
+    --burgundy-dark: #59212F;
+
+    --olive: #68734D;
+    --olive-dark: #4F5B3C;
+    --olive-light: #89936D;
+
+    --beige: #E8DCC8;
+    --warm-beige: #F2E8D8;
+    --cream: #FAF6EF;
+
+    --gold: #A87945;
+    --gold-light: #D4B47A;
+
+    --dark-text: #443B32;
+    --muted-text: #75685B;
+
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: 'DM Sans', sans-serif;
+    --display-font: 'Playfair Display', serif;
+}
+
+
+/* =========================================
+   2. GENERAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--warm-beige);
+    color: var(--dark-text);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   3. NAVIGATION BAR
+========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: var(--rose);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 85px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.brand-name {
+    color: #FFF9F0;
+    font-family: var(--heading-font);
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #FFF9F0;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: var(--gold-light);
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #F8E8CE;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   4. STORY SCREEN CONTROL
+========================================= */
+
+.about-main {
+    width: 100%;
+    min-height: 650px;
+}
+
+.story-screen {
+    display: none;
+    width: 100%;
+    min-height: 650px;
+    animation: storyFade 0.65s ease both;
+}
+
+.story-screen.active {
+    display: block;
+}
+
+@keyframes storyFade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   5. INTRODUCTION
+   FLORAL BACKGROUND ONLY HERE
+========================================= */
+
+.page-intro {
+    position: relative;
+    min-height: 680px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 80px 20px;
+
+    background:
+        url("../assets/images/hero/header-floral.png") center center / cover no-repeat;
+}
+
+.page-intro.story-screen.active {
+    display: flex;
+}
+
+.intro-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(42, 27, 27, 0.48);
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    color: var(--cream);
+}
+
+.intro-label {
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #F1D8B7;
+}
+
+.intro-content h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(55px, 8vw, 100px);
+    font-weight: 500;
+    line-height: 1.1;
+    color: #FFF9F0;
+}
+
+.intro-divider {
+    width: 100px;
+    height: 2px;
+    margin: 25px auto;
+    background: var(--gold-light);
+}
+
+.intro-quote {
+    max-width: 650px;
+    margin: auto;
+    font-family: var(--display-font);
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #F5E6D5;
+}
+
+.discover-btn {
+    margin-top: 40px;
+    padding: 15px 32px;
+
+    border: 1px solid var(--gold-light);
+    background: var(--rose);
+    color: #FFF9F0;
+
+    font-family: var(--body-font);
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.discover-btn:hover {
+    background: var(--burgundy);
+    border-color: var(--burgundy);
+    transform: translateY(-3px);
+}
+
+.button-arrow {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+
+/* =========================================
+   6. COMMON SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 55px;
+    padding: 75px 20px 0;
+}
+
+.section-label {
+    color: var(--rose-dark);
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-heading h2,
+.promise-content h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--olive-dark);
+}
+
+.heading-divider {
+    width: 75px;
+    height: 2px;
+    margin: 22px auto;
+    background: var(--gold);
+}
+
+.section-heading>p:last-child {
+    font-family: var(--display-font);
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--burgundy);
+}
+
+
+/* =========================================
+   7. OUR STORY
+========================================= */
+
+.story-section {
+    background: var(--warm-beige);
+    padding-bottom: 65px;
+}
+
+.story-container {
+    width: 88%;
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.story-text h3 {
+    font-family: var(--heading-font);
+    font-size: 34px;
+    color: var(--burgundy);
+    margin-bottom: 25px;
+}
+
+.story-text p {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--dark-text);
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.story-text .story-highlight {
+    font-family: var(--display-font);
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--burgundy);
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   8. TEMPLE ARCH PHOTO FRAME
+========================================= */
+
+.story-slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin: auto;
+    padding: 5px;
+    overflow: hidden;
+
+    background: #E8D5B9;
+
+    border: 2px solid #A87945;
+    border-radius: 250px 250px 8px 8px;
+
+    box-shadow: 0 12px 35px rgba(75, 52, 30, 0.18);
+}
+
+.story-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    border-radius: 240px 240px 4px 4px;
+}
+
+.story-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.story-slide.active {
+    opacity: 1;
+}
+
+.story-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideshow-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+
+    padding: 25px 15px;
+
+    text-align: center;
+    background: linear-gradient(transparent,
+            rgba(45, 30, 25, 0.75));
+
+    color: #FFF9F0;
+    font-family: var(--display-font);
+    font-size: 17px;
+    font-style: italic;
+
+    border-radius: 0 0 4px 4px;
+}
+
+
+/* =========================================
+   9. LAYER NAVIGATION
+========================================= */
+
+.layer-navigation {
+    width: 88%;
+    max-width: 1250px;
+    margin: 65px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(168, 121, 69, 0.35);
+    padding-top: 25px;
+}
+
+.back-btn,
+.next-btn {
+    min-width: 125px;
+    padding: 13px 22px;
+
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.back-btn {
+    background: transparent;
+    color: var(--burgundy);
+    border: 1px solid var(--rose-dark);
+}
+
+.next-btn {
+    background: var(--rose);
+    color: #FFF9F0;
+    border: 1px solid var(--rose);
+}
+
+.back-btn:hover {
+    background: var(--burgundy);
+    color: white;
+}
+
+.next-btn:hover {
+    background: var(--burgundy);
+    border-color: var(--burgundy);
+    transform: translateY(-2px);
+}
+
+.layer-counter {
+    color: var(--olive-dark);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   10. PHILOSOPHY
+========================================= */
+
+.philosophy {
+    background: #EDE3D2;
+    padding-bottom: 65px;
+}
+
+.philosophy-container {
+    width: 88%;
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.philosophy-text h3 {
+    font-family: var(--heading-font);
+    font-size: 34px;
+    color: var(--burgundy);
+    margin-bottom: 25px;
+}
+
+.philosophy-text p {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 18px;
+    color: var(--dark-text);
+    text-align: justify;
+}
+
+.philosophy-text .story-highlight {
+    font-family: var(--display-font);
+    color: var(--burgundy);
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.philosophy-image {
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+
+    border: 8px solid #E8D5B9;
+    outline: 1px solid var(--gold);
+    outline-offset: 5px;
+}
+
+.philosophy-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   11. CULTURE SECTION
+========================================= */
+
+.culture-section {
+    background: var(--warm-beige);
+    padding-bottom: 65px;
+}
+
+.culture-container {
+    width: 88%;
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.culture-card {
+    background: var(--cream);
+    border: 1px solid rgba(168, 121, 69, 0.35);
+
+    box-shadow: 0 8px 25px rgba(80, 60, 40, 0.08);
+
+    transition: 0.35s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(80, 60, 40, 0.15);
+}
+
+.culture-image {
+    height: 280px;
+    overflow: hidden;
+}
+
+.culture-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.culture-card:hover .culture-image img {
+    transform: scale(1.05);
+}
+
+.culture-content {
+    padding: 28px 25px 32px;
+    text-align: center;
+}
+
+.culture-content h3 {
+    font-family: var(--heading-font);
+    font-size: 27px;
+    color: var(--burgundy);
+    margin-bottom: 15px;
+}
+
+.culture-content p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--dark-text);
+}
+
+
+/* =========================================
+   12. OUR PROMISE
+========================================= */
+
+.promise-section {
+    position: relative;
+    min-height: 650px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px 65px;
+    text-align: center;
+
+    background: #EDE3D2;
+}
+
+.promise-section.story-screen.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.promise-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.promise-content .section-label {
+    margin-bottom: 20px;
+}
+
+.promise-quote {
+    font-family: var(--display-font);
+    font-size: 23px;
+    font-style: italic;
+    color: var(--burgundy);
+    margin: 25px 0;
+}
+
+.promise-description {
+    max-width: 700px;
+    margin: 20px auto;
+
+    font-size: 15px;
+    line-height: 2;
+    color: var(--dark-text);
+}
+
+.promise-content h3 {
+    font-family: var(--heading-font);
+    font-size: 27px;
+    color: var(--olive-dark);
+    margin-top: 35px;
+}
+
+.promise-ending {
+    margin-top: 25px;
+    font-family: var(--display-font);
+    font-size: 19px;
+    font-style: italic;
+    color: var(--burgundy);
+}
+
+
+/* =========================================
+   13. FOOTER
+========================================= */
+
+.site-footer {
+    background: var(--rose);
+    color: #FFF9F0;
+    padding: 60px 7% 20px;
+}
+
+.footer-content {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-brand h2 {
+    font-family: var(--heading-font);
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.footer-brand p {
+    max-width: 350px;
+    font-family: var(--display-font);
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #FFF0E5;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-family: var(--heading-font);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    display: block;
+    width: fit-content;
+    color: #FFF9F0;
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold-light);
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.footer-contact a {
+    display: inline-block;
+    padding: 11px 22px;
+
+    border: 1px solid #F7E7D5;
+    color: #FFF9F0;
+
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.footer-contact a:hover {
+    background: var(--burgundy);
+    border-color: var(--burgundy);
+}
+
+.copyright {
+    max-width: 1250px;
+    margin: 45px auto 0;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #FFF0E5;
+}
+
+
+/* =========================================
+   14. TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        width: 94%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .story-container,
+    .philosophy-container {
+        gap: 35px;
+    }
+
+    .story-slideshow {
+        height: 550px;
+    }
+
+    .culture-container {
+        gap: 20px;
+    }
+
+    .culture-image {
+        height: 230px;
+    }
+
+    .footer-content {
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================
+   15. MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    .logo-container img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+
+        padding: 25px 0;
+
+        background: var(--rose-dark);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .about-main,
+    .story-screen {
+        min-height: 550px;
+    }
+
+    .page-intro {
+        min-height: 600px;
+        padding: 60px 20px;
+    }
+
+    .intro-content h1 {
+        font-size: 58px;
+    }
+
+    .intro-quote {
+        font-size: 17px;
+    }
+
+    .section-heading {
+        padding-top: 55px;
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2,
+    .promise-content h2 {
+        font-size: 39px;
+    }
+
+    .section-heading>p:last-child {
+        font-size: 15px;
+    }
+
+    .story-container,
+    .philosophy-container {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .story-text h3,
+    .philosophy-text h3 {
+        font-size: 29px;
+    }
+
+    .story-text p,
+    .philosophy-text p {
+        font-size: 14px;
+    }
+
+    .story-slideshow {
+        max-width: 360px;
+        height: 480px;
+    }
+
+    .philosophy-image {
+        height: 350px;
+    }
+
+    .culture-container {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .culture-image {
+        height: 280px;
+    }
+
+    .layer-navigation {
+        width: 88%;
+        margin-top: 45px;
+    }
+
+    .back-btn,
+    .next-btn {
+        min-width: 100px;
+        padding: 11px 13px;
+        font-size: 12px;
+    }
+
+    .layer-counter {
+        font-size: 11px;
+    }
+
+    .promise-section {
+        min-height: 600px;
+        padding: 65px 20px;
+    }
+
+    .promise-quote {
+        font-size: 19px;
+    }
+
+    .promise-description {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .site-footer {
+        padding: 45px 8% 20px;
+    }
+
+}
+
+
+/* =========================================
+   16. SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .brand-name {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    .intro-content h1 {
+        font-size: 48px;
+    }
+
+    .intro-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .intro-quote {
+        font-size: 15px;
+    }
+
+    .discover-btn {
+        padding: 13px 20px;
+        font-size: 12px;
+    }
+
+    .section-heading h2,
+    .promise-content h2 {
+        font-size: 33px;
+    }
+
+    .story-slideshow {
+        height: 400px;
+    }
+
+    .layer-navigation {
+        gap: 8px;
+    }
+
+    .back-btn,
+    .next-btn {
+        min-width: 85px;
+        padding: 10px 8px;
+        font-size: 11px;
+    }
+
+    .layer-counter {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+}
+
+
+/* =========================================
+   17. REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+/* =========================================
+   CULTURE CARD EXPANSION
+========================================= */
+
+.culture-card {
+    cursor: pointer;
+    transition: transform 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+/* Enlarged Card */
+.culture-card.active {
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(117, 67, 75, 0.25);
+}
+
+/* Other cards become slightly dim */
+.culture-cards-container.has-active .culture-card:not(.active) {
+    transform: scale(0.95);
+    opacity: 0.6;
+    transition: all 0.5s ease;
+}

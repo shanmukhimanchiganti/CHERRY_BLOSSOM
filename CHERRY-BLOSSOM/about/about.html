@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Cherry Blossom</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- About Page CSS -->
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         1. HEADER
+    ========================================= -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/logo2.jpeg" alt="Cherry Blossom Logo">
+                </a>
+
+                <span class="brand-name">CHERRY BLOSSOM</span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../reviews.html">Reviews</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         2. ABOUT PAGE CONTENT
+    ========================================= -->
+
+    <main class="about-main">
+
+        <!-- =========================================
+             INTRODUCTION
+             FIRST SCREEN VISIBLE ON PAGE LOAD
+        ========================================= -->
+
+        <section class="page-intro story-screen active" id="introScreen">
+
+            <div class="intro-overlay"></div>
+
+            <div class="intro-content">
+
+                <p class="intro-label">A LITTLE ABOUT US</p>
+
+                <h1>Our Story</h1>
+
+                <div class="intro-divider"></div>
+
+                <p class="intro-quote">
+                    Every blossom has a story, and every celebration
+                    deserves one.
+                </p>
+
+                <button class="discover-btn" onclick="startStory()">
+
+                    Discover Our Story
+
+                    <span class="button-arrow">→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             STORY SECTION 1
+             AT THE HEART BEHIND THE CELEBRATIONS
+        ========================================= -->
+
+        <section class="story-section story-screen" id="storyOne">
+
+            <div class="section-heading">
+
+                <p class="section-label">OUR BEGINNING</p>
+
+                <h2>At the Heart Behind the Celebrations</h2>
+
+                <div class="heading-divider"></div>
+
+                <p>
+                    Every beautiful celebration begins with a story,
+                    a dream, and a feeling worth remembering.
+                </p>
+
+            </div>
+
+
+            <div class="story-container">
+
+                <div class="story-text">
+
+                    <h1 style="color:#7c3048;">Where Every Story Begins</h1>
+
+                    <p style="font:large;">
+                        At Cherry Blossom, we believe that every
+                        celebration is more than just an event.
+                        It is a collection of emotions, memories,
+                        traditions, and beautiful moments.
+                    </p>
+
+                    <p style="font-size:large;">
+                        What began as a passion for creating
+                        meaningful experiences grew into a journey
+                        of bringing people's dreams to life.
+                    </p>
+
+                    <p style="font-size:large;">
+                        From the smallest details to the grandest
+                        celebrations, we put our heart into creating
+                        moments that stay with you forever.
+                    </p>
+
+                    <p class="story-highlight">
+                        Because behind every celebration, there is
+                        a story waiting to bloom.
+                    </p>
+
+                </div>
+
+
+                <!-- TEMPLE ARCH PHOTO SLIDESHOW -->
+
+                <div class="story-slideshow">
+
+                    <div class="story-slides">
+
+                        <div class="story-slide active">
+                            <img src="../assets/images/about/story1.jpeg" alt="Cherry Blossom celebration">
+                        </div>
+
+                        <div class="story-slide">
+                            <img src="../assets/images/about/story2.jpeg" alt="Beautiful celebration moments">
+                        </div>
+
+                        <div class="story-slide">
+                            <img src="../assets/images/about/story3.jpeg" alt="Elegant event decorations">
+                        </div>
+
+                        <div class="story-slide">
+                            <img src="../assets/images/about/story4.jpeg" alt="Special celebration">
+                        </div>
+
+                        <div class="story-slide">
+                            <img src="../assets/images/about/story5.jpeg" alt="Floral event arrangements">
+                        </div>
+
+                        <div class="story-slide">
+                            <img src="../assets/images/about/story6.jpeg" alt="Memorable event">
+                        </div>
+
+                        <div class="story-slide">
+                            <img src="../assets/images/about/story7.jpeg" alt="Beautiful event details">
+                        </div>
+
+                        <div class="story-slide">
+                            <img src="../assets/images/about/story8.jpeg" alt="Cherry Blossom memories">
+                        </div>
+
+                    </div>
+
+                    <div class="slideshow-caption">
+                        <p>Moments made with love</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STORY NAVIGATION -->
+
+            <div class="layer-navigation">
+
+                <button class="back-btn" onclick="goToIntro()">
+
+                    ← Back
+
+                </button>
+
+                <span class="layer-counter">01 / 04</span>
+
+                <button class="next-btn" onclick="nextStory()">
+
+                    Next →
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             STORY SECTION 2
+             BEAUTY LIES IN EVERY LITTLE DETAIL
+        ========================================= -->
+
+        <section class="philosophy story-screen" id="storyTwo">
+
+            <div class="section-heading">
+
+                <p class="section-label">OUR PHILOSOPHY</p>
+
+                <h2>Beauty Lies in Every Little Detail</h2>
+
+                <div class="heading-divider"></div>
+
+                <p>
+                    Because the magic of a celebration lives
+                    in the details.
+                </p>
+
+            </div>
+
+
+            <div class="philosophy-container">
+
+                <div class="philosophy-text">
+
+                    <h3>Thoughtfully Created, Beautifully Remembered</h3>
+
+                    <p>
+                        We believe that true elegance is found in
+                        the little things. Every flower, every colour,
+                        every arrangement, and every thoughtful touch
+                        contributes to a meaningful experience.
+                    </p>
+
+                    <p>
+                        Our approach is simple: listen carefully,
+                        understand your vision, and transform it
+                        into something beautiful.
+                    </p>
+
+                    <p>
+                        We pay attention to every detail so that
+                        you can enjoy your special moments without
+                        worrying about the arrangements.
+                    </p>
+
+                    <p class="story-highlight">
+                        Little details. Beautiful experiences.
+                        Memories that last forever.
+                    </p>
+
+                </div>
+
+
+                <div class="philosophy-image">
+
+                    <img src="../assets/images/about/story12.jpeg" alt="Elegant celebration details">
+
+                </div>
+
+            </div>
+
+
+            <div class="layer-navigation">
+
+                <button class="back-btn" onclick="previousStory()">
+
+                    ← Previous
+
+                </button>
+
+                <span class="layer-counter">02 / 04</span>
+
+                <button class="next-btn" onclick="nextStory()">
+
+                    Next →
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             STORY SECTION 3
+             INSPIRED BY THE WORLD
+        ========================================= -->
+
+        <section class="culture-section story-screen" id="storyThree">
+
+            <div class="section-heading">
+
+                <p class="section-label">OUR INSPIRATION</p>
+
+                <h2>Inspired by the World</h2>
+
+                <div class="heading-divider"></div>
+
+                <p>
+                    Celebrating Cultures, Connecting Hearts.
+                </p>
+
+            </div>
+
+
+            <div class="culture-container">
+
+                <!-- CULTURE CARD 1 -->
+
+                <div class="culture-card">
+
+                    <div class="culture-image">
+                        <img src="../assets/images/about/story9.jpeg" alt="Indian traditions">
+                    </div>
+
+                    <div class="culture-content">
+
+                        <h3>Indian Traditions</h3>
+
+                        <p>
+                            Rooted in traditions, colours, rituals,
+                            and timeless celebrations, we honour
+                            the beauty of Indian culture.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CULTURE CARD 2 -->
+
+                <div class="culture-card">
+
+                    <div class="culture-image">
+                        <img src="../assets/images/about/story10.jpeg" alt="Petals of elegance">
+                    </div>
+
+                    <div class="culture-content">
+
+                        <h3>Petals of Elegance</h3>
+
+                        <p>
+                            Inspired by nature's beauty, we bring
+                            together graceful details and thoughtful
+                            designs to create elegant experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CULTURE CARD 3 -->
+
+                <div class="culture-card">
+
+                    <div class="culture-image">
+                        <img src="../assets/images/about/story11.jpeg" alt="Universal love">
+                    </div>
+
+                    <div class="culture-content">
+
+                        <h3>Universal Love</h3>
+
+                        <p>
+                            Every culture has its own way of
+                            celebrating love, togetherness,
+                            happiness, and life's special moments.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="layer-navigation">
+
+                <button class="back-btn" onclick="previousStory()">
+
+                    ← Previous
+
+                </button>
+
+                <span class="layer-counter">03 / 04</span>
+
+                <button class="next-btn" onclick="nextStory()">
+
+                    Next →
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             STORY SECTION 4
+             OUR PROMISE
+        ========================================= -->
+
+        <section class="promise-section story-screen" id="storyFour">
+
+            <div class="promise-content">
+
+                <p class="section-label">A PROMISE FROM OUR HEART</p>
+
+                <h2>Our Promise</h2>
+
+                <div class="heading-divider"></div>
+
+                <p class="promise-quote">
+                    Every Moment Deserves to Bloom.
+                </p>
+
+                <p class="promise-description">
+                    At Cherry Blossom, our promise is to make every
+                    celebration meaningful, every detail memorable,
+                    and every experience special.
+                </p>
+
+                <p class="promise-description">
+                    We promise to listen to your dreams, care for
+                    your moments, and create celebrations that
+                    reflect your story.
+                </p>
+
+                <h3>
+                    Your moments. Your memories. Our commitment.
+                </h3>
+
+                <p class="promise-ending">
+                    With love, from Cherry Blossom.
+                </p>
+
+            </div>
+
+
+            <div class="layer-navigation">
+
+                <button class="back-btn" onclick="previousStory()">
+
+                    ← Previous
+
+                </button>
+
+                <span class="layer-counter">04 / 04</span>
+
+                <button class="next-btn" onclick="finishStory()">
+
+                    Finish
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- =========================================
+         4. JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+        /* =========================================
+           MOBILE NAVIGATION
+        ========================================= */
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+
+            navLinks.classList.toggle("show");
+
+            const isOpen = navLinks.classList.contains("show");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+        });
+
+
+        /* =========================================
+           STORY LAYER NAVIGATION
+        ========================================= */
+
+        const introScreen = document.getElementById("introScreen");
+
+        const storyScreens = [
+            document.getElementById("storyOne"),
+            document.getElementById("storyTwo"),
+            document.getElementById("storyThree"),
+            document.getElementById("storyFour")
+        ];
+
+        let currentStory = 0;
+
+
+        /* SHOW INTRODUCTION */
+
+        function goToIntro() {
+
+            storyScreens.forEach(function (screen) {
+                screen.classList.remove("active");
+            });
+
+            introScreen.classList.add("active");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* OPEN FIRST STORY */
+
+        function startStory() {
+
+            currentStory = 0;
+
+            introScreen.classList.remove("active");
+
+            showStory(currentStory);
+
+        }
+
+
+        /* DISPLAY SELECTED STORY */
+
+        function showStory(index) {
+
+            introScreen.classList.remove("active");
+
+            storyScreens.forEach(function (screen) {
+                screen.classList.remove("active");
+            });
+
+            currentStory = index;
+
+            storyScreens[currentStory].classList.add("active");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* NEXT STORY */
+
+        function nextStory() {
+
+            if (currentStory < storyScreens.length - 1) {
+
+                showStory(currentStory + 1);
+
+            }
+
+        }
+
+
+        /* PREVIOUS STORY */
+
+        function previousStory() {
+
+            if (currentStory > 0) {
+
+                showStory(currentStory - 1);
+
+            } else {
+
+                goToIntro();
+
+            }
+
+        }
+
+
+        /* FINISH STORY */
+
+        function finishStory() {
+
+            goToIntro();
+
+        }
+
+
+        /* =========================================
+           AUTOMATIC STORY SLIDESHOW
+        ========================================= */
+
+        const slides = document.querySelectorAll(".story-slide");
+
+        let slideIndex = 0;
+
+        function showNextSlide() {
+
+            if (slides.length === 0) {
+                return;
+            }
+
+            slides[slideIndex].classList.remove("active");
+
+            slideIndex = (slideIndex + 1) % slides.length;
+
+            slides[slideIndex].classList.add("active");
+
+        }
+
+        if (slides.length > 1) {
+
+            setInterval(showNextSlide, 3000);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

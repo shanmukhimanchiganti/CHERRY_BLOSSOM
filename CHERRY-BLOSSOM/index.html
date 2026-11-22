@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cherry Blossom | Events & Celebrations</title>
+
+  <meta name="description"
+    content="Cherry Blossom - Creating beautiful memories through elegant events, celebrations, DJ and photography.">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+
+  <header class="header">
+    <nav class="navbar">
+
+      <a href="index.html" class="logo logo-container">
+        <img src="assets/images/logo/logo.jpeg" alt="Cherry Blossom Logo">
+
+        <span class="welcome-text">
+          WELCOME TO CHERRY BLOSSOM
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+
+        <li>
+          <a href="about/about.html" class="nav-link">About</a>
+        </li>
+
+        <li>
+          <a href="services.html" class="nav-link">Services</a>
+        </li>
+
+        <li>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+
+        <li>
+          <a href="reviews.html" class="nav-link">Reviews</a>
+        </li>
+
+        <li>
+          <a href="contact.html" class="nav-link contact-link">LET'S TALK</a>
+        </li>
+
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+
+  <section class="hero" id="home">
+
+    <!-- HERO SLIDESHOW IMAGE -->
+
+    <div class="hero-slideshow">
+      <img src="assets/images/hero/hero1.jpeg" alt="Cherry Blossom Events" id="heroImage">
+    </div>
+
+    <!-- HERO OVERLAY -->
+
+    <div class="hero-overlay"></div>
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+      <p class="hero-subtitle">
+        CREATING MOMENTS THAT LAST FOREVER
+      </p>
+
+      <h1>
+        Every Moment <br>
+        <span>Deserves to Bloom.</span>
+      </h1>
+
+      <p class="hero-description">
+        From unforgettable celebrations to beautiful memories,
+        we bring your dreams to life with creativity, elegance
+        and perfection.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="services.html" class="btn btn-primary">
+          EXPLORE OUR SERVICES
+        </a>
+
+        <a href="contact.html" class="btn btn-outline">
+          PLAN YOUR EVENT
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- SLIDESHOW ARROWS -->
+
+    <button class="slide-arrow" id="prevSlide" aria-label="Previous slide">
+      &#10094;
+    </button>
+
+    <button class="slide-arrow" id="nextSlide" aria-label="Next slide">
+      &#10095;
+    </button>
+
+    <!-- SLIDESHOW INDICATORS -->
+
+    <div class="hero-indicators" id="heroIndicators"></div>
+
+    <!-- SLIDE COUNTER -->
+
+    <div class="hero-counter" id="heroCounter">
+      <span>01</span> / 08
+    </div>
+
+  </section>
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="js/script.js" defer></script>
+
+</body>
+
+</html>
