@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cinematic Gallery | Cherry Blossom</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Home page styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <!-- Gallery styles -->
+    <link rel="stylesheet" href="gallery.css">
+
+    <!-- Gallery JavaScript -->
+    <script src="../js/gallery.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR - SAME AS HOME -->
+
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo logo-container">
+                <img src="../assets/images/logo/logo.jpeg" alt="Cherry Blossom Logo">
+
+                <span class="welcome-text">
+                    WELCOME TO CHERRY BLOSSOM
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about/about.html" class="nav-link">About</a></li>
+                <li><a href="../services.html" class="nav-link">Services</a></li>
+                <li><a href="../gallery/gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="../reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="../contact.html" class="nav-link contact-link">LET'S TALK</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- CINEMATIC INTRO -->
+
+    <main>
+
+        <section class="cinematic-hero">
+
+            <div class="hero-image" id="heroImage"></div>
+
+            <div class="hero-shade"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-overline">
+                    CHERRY BLOSSOM PRESENTS
+                </p>
+
+                <h1>
+                    A Garden of Blooms 
+                </h1>
+
+                <p class="hero-description">
+                    A beautiful collection of memories,
+                    emotions and unforgettable celebrations.
+                </p>
+
+                <a href="#galleryExperience" class="explore-button">
+                    EXPLORE THE GALLERY
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+            <div class="hero-bottom-label">
+                <span>01</span>
+                <span class="hero-line"></span>
+                <span>THE COLLECTION</span>
+            </div>
+
+        </section>
+
+
+        <!-- SINGLE CINEMATIC GALLERY - 20 PHOTOS -->
+
+        <section class="gallery-experience" id="galleryExperience">
+
+            <div class="gallery-heading">
+
+                <p class="section-overline">THE ART OF MEMORIES</p>
+
+                <h2>
+                    Moments That <span>Stay Forever</span>
+                </h2>
+
+                <p>
+                    Twenty beautiful photographs.
+                    Twenty stories. Countless memories.
+                </p>
+
+            </div>
+
+
+            <!-- CINEMATIC IMAGE VIEWER -->
+
+            <div class="cinematic-viewer">
+
+                <div class="featured-frame" id="featuredFrame">
+
+                    <img id="featuredImage" src="../assets/images/gallery/image1.jpeg"
+                        alt="Cherry Blossom Gallery Photograph">
+
+                    <div class="featured-shade"></div>
+
+                    <div class="featured-caption">
+
+                        <p id="featuredCategory">
+                            CHERRY BLOSSOM COLLECTION
+                        </p>
+
+                        <h3 id="featuredTitle">
+                            Beautiful Memory 00
+                        </h3>
+
+                        <p id="featuredDescription">
+                            Every beautiful moment deserves to be remembered.
+                        </p>
+
+                    </div>
+
+                    <button class="expand-button" id="expandImage" aria-label="Expand image">
+                        ⛶
+                    </button>
+
+                    <div class="image-count">
+                        <span id="currentCount">01</span>
+                        <span>/</span>
+                        <span id="totalCount">20</span>
+                    </div>
+
+                </div>
+
+
+                <!-- PREVIOUS AND NEXT CONTROLS -->
+
+                <div class="viewer-controls">
+
+                    <button id="previousImage" aria-label="Previous image">
+                        ←
+                    </button>
+
+                    <p>EXPLORE THE MOMENTS</p>
+
+                    <button id="nextImage" aria-label="Next image">
+                        →
+                    </button>
+
+                </div>
+
+
+                <!-- 20 IMAGE THUMBNAILS -->
+
+                <div class="thumbnail-area">
+
+                    <div class="thumbnail-track" id="thumbnailTrack">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FULLSCREEN LIGHTBOX -->
+
+    <div class="cinematic-lightbox" id="cinematicLightbox">
+
+        <button class="lightbox-close" id="closeLightbox" aria-label="Close fullscreen">
+            ×
+        </button>
+
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrevious" aria-label="Previous image">
+            ❮
+        </button>
+
+        <div class="lightbox-inner">
+
+            <img id="lightboxImage" src="" alt="Expanded photograph">
+
+            <div class="lightbox-info">
+                <h2 id="lightboxTitle"></h2>
+                <p id="lightboxDescription"></p>
+            </div>
+
+        </div>
+
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+            ❯
+        </button>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="gallery-footer">
+
+        <p>CHERRY BLOSSOM</p>
+
+        <span>
+            Where beautiful moments become timeless memories.
+        </span>
+    </footer>
+
+</body>
+
+</html>
